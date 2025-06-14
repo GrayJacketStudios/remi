@@ -1,17 +1,16 @@
-# 🪐 Fediverse Explorer
+# 🪐 Remi Explorer
 
-A cross-platform React Native (Expo) app to discover, explore, and interact with federated instances from **Lemmy**, **Kbin**, and **Piefed**. Supports instance login, voting, commenting, and gesture-based interactions — all with a smooth, native feel.
+A cross-platform React Native (Expo) app to discover, explore, and interact with federated instances from **Lemmy**, **Mbin**, and **Piefed**. Supports instance login, voting, commenting, and gesture-based interactions.
 
 ---
 
 ## 🚀 Features
 
-- 🌐 Browse and search **Lemmy**, **Kbin**, and **Piefed** instances
+- 🌐 Browse and search **Lemmy**, **Mbin**, and **Piefed** instances
 - 🔐 Login to any instance and manage your account
 - 📰 View posts and comments
 - 🔺 Upvote / 🔻 Downvote
 - ⚙️ Configurable gesture actions (swipe, tap, hold, etc.)
-- 🔔 Push notifications (via Expo/Firebase)
 - 📱 Fully native experience, with future iOS support
 
 ---
@@ -61,7 +60,7 @@ npm run ios
 
 ```vbnet
 src/
-├── api/               ← API clients for Lemmy/Kbin/Piefed
+├── clients/           ← API clients for Lemmy/Kbin/Piefed
 ├── components/        ← UI components like PostCard, CommentThread, etc.
 ├── config/            ← Default app settings & gesture maps
 ├── hooks/             ← Custom React hooks
@@ -77,10 +76,9 @@ Users will be able to assign custom actions to gestures like:
     Double Tap
 Mappings will be stored in local JSON config via AsyncStorage or SecureStore.
 
-## 🔒 Authentication (Planned)
-    Login via Lemmy instance using JWT-based auth
-    Session persisted securely via expo-secure-store
-    Support for multiple instances in the future
+## 🔒 Authentication 
+Users can select different instances from a list, or typing their prefered instance. 
+The client factory will try to determine the type of instance, and login to it.
 
 ## 🧑‍💻 License
 MIT License © 2025 Sebastián Cristi
